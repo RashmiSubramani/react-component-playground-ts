@@ -1,0 +1,41 @@
+/* Tooltip Styles */
+
+.tt-demo {
+  padding: 100px;
+}
+
+.tt-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tt-tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+/* Tooltip arrow */
+.tt-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tt-underline {
+  text-decoration: underline;
+}
