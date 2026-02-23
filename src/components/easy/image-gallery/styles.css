@@ -1,0 +1,117 @@
+/* Image Gallery Styles */
+
+.ig-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Input row ──────────────────────────────────── */
+
+.ig-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.ig-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.ig-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.ig-add-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ig-add-btn:hover {
+  background: #0056b3;
+}
+
+/* ─── Gallery grid ───────────────────────────────── */
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.ig-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ig-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ig-thumb:hover {
+  opacity: 0.85;
+}
+
+.ig-delete-btn {
+  padding: 8px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ig-delete-btn:hover {
+  background: #c82333;
+}
+
+/* ─── Empty state ────────────────────────────────── */
+
+.ig-empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+/* ─── Modal overlay ──────────────────────────────── */
+
+.ig-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.ig-modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  cursor: default;
+}
