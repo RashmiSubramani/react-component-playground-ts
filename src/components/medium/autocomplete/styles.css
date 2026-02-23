@@ -1,0 +1,207 @@
+/* Autocomplete Styles */
+
+.ac-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.ac-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ─── Search wrapper ────────────────────────────── */
+
+.ac-wrapper {
+  position: relative;
+}
+
+.ac-input-row {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 0 10px;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.ac-input-row-focused {
+  border-color: #6c3483;
+}
+
+.ac-search-icon {
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+.ac-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 8px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.ac-clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  padding: 4px;
+  line-height: 1;
+  border-radius: 50%;
+  transition: color 0.2s;
+}
+
+.ac-clear-btn:hover {
+  color: #333;
+}
+
+.ac-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #6c3483;
+  border-radius: 50%;
+  animation: ac-spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes ac-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─── Dropdown ──────────────────────────────────── */
+
+.ac-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.ac-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.1s;
+}
+
+.ac-option:hover,
+.ac-option-active {
+  background: #f5f0fa;
+}
+
+.ac-option-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.ac-option-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ac-option-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.ac-option-category {
+  font-size: 11px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.ac-option-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6c3483;
+  flex-shrink: 0;
+}
+
+.ac-highlight {
+  background: #e8daef;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.ac-no-results {
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ─── Selected card ─────────────────────────────── */
+
+.ac-selected {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.ac-selected-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.ac-selected-info {
+  flex: 1;
+}
+
+.ac-selected-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+
+.ac-selected-meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.ac-selected-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6c3483;
+}
+
+/* ─── Hint ──────────────────────────────────────── */
+
+.ac-hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #aaa;
+  font-style: italic;
+}
