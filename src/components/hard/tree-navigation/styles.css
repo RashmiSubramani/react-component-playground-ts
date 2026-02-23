@@ -1,0 +1,40 @@
+/* Tree Navigation Styles */
+
+.tn-container {
+  text-align: left;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tn-node {
+  margin-left: 20px;
+}
+
+.tn-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.tn-folder > .tn-content > span {
+  font-weight: bold;
+}
+
+.tn-file > .tn-content > span {
+  font-style: italic;
+}
+
+.tn-children {
+  margin-left: 20px;
+}
+
+.tn-expand-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}

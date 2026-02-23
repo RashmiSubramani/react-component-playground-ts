@@ -1,0 +1,108 @@
+/* File & Folder Explorer Styles */
+
+.ffe-container {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: monospace;
+}
+
+.ffe-node {
+  padding-left: 20px;
+}
+
+.ffe-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.ffe-folder-name {
+  font-weight: bold;
+}
+
+.ffe-file-name {
+  color: #555;
+}
+
+.ffe-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 2px;
+  color: #555;
+}
+
+.ffe-icon-btn:hover {
+  color: #007bff;
+}
+
+.ffe-delete:hover {
+  color: #dc3545;
+}
+
+/* Modal */
+.ffe-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.ffe-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 280px;
+}
+
+.ffe-modal h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.ffe-modal-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.ffe-modal-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.ffe-modal-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.ffe-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.ffe-btn:hover {
+  background-color: #0056b3;
+}
+
+.ffe-btn-cancel {
+  background-color: #6c757d;
+}
+
+.ffe-btn-cancel:hover {
+  background-color: #565e64;
+}
