@@ -1,0 +1,42 @@
+.overallContainer {
+  width: 600px;
+}
+
+.headingContainer {
+  display: flex;
+  font-weight: 600;
+}
+
+.heading,
+.tabBody {
+  border: 1px solid black;
+}
+
+.heading {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.tabBody {
+  min-height: 300px;
+  padding: 16px;
+}
+
+.error {
+  display: block;
+  color: red;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
