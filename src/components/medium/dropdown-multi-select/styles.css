@@ -1,0 +1,64 @@
+/* Dropdown Multi-Select Styles */
+
+.dropdownDemo {
+  padding: 50px;
+}
+
+.dropdown {
+  width: 250px;
+  position: relative;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.dropdown:focus {
+  outline: 2px solid #007bff;
+  border-radius: 4px;
+}
+
+.dropdown-header {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  margin-top: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item.selected {
+  background-color: #e8f4fd;
+}
+
+.multiselectCheckBox {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}

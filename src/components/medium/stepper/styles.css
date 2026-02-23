@@ -1,0 +1,72 @@
+/* Stepper Styles */
+
+.stp-stepper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.stp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stp-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.stp-name {
+  font-size: 14px;
+}
+
+.stp-active .stp-number {
+  background-color: #157ae5;
+  color: #fff;
+}
+
+.stp-complete .stp-number {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.stp-progress-bar {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.stp-progress {
+  height: 100%;
+  background-color: #28a745;
+  transition: width 0.2s ease;
+}
+
+.stp-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.stp-btn:hover {
+  background-color: #0056b3;
+}

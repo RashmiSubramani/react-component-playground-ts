@@ -1,0 +1,32 @@
+/* Selectable Grid Styles */
+
+.sg-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--sg-cols, 10), 35px);
+  grid-template-rows: repeat(var(--sg-rows, 10), 35px);
+  gap: 2px;
+  user-select: none;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.sg-box {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sg-selected {
+  background-color: lightblue;
+}
+
+.sg-count {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+}

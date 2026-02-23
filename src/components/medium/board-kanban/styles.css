@@ -1,0 +1,130 @@
+/* Kanban Board Styles */
+
+.kb-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* ─── Board layout ───────────────────────────────── */
+
+.kb-board {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.kb-column {
+  flex: 1;
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kb-col-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+/* ─── Task cards ─────────────────────────────────── */
+
+.kb-task {
+  background: #fff;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+  transition: background-color 0.2s;
+}
+
+.kb-task:hover {
+  background-color: #f9f9f9;
+}
+
+.kb-task:active {
+  cursor: grabbing;
+}
+
+.kb-task-label {
+  flex-grow: 1;
+  cursor: pointer;
+  padding-right: 8px;
+  font-size: 14px;
+}
+
+/* ─── Edit input ─────────────────────────────────── */
+
+.kb-edit-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.kb-edit-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* ─── Delete button ──────────────────────────────── */
+
+.kb-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #aaa;
+  transition: color 0.2s;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.kb-delete-btn:hover {
+  color: #e63946;
+}
+
+/* ─── Add task section ───────────────────────────── */
+
+.kb-add-section {
+  margin-top: 8px;
+}
+
+.kb-add-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.kb-add-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.kb-add-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.kb-add-btn:hover {
+  text-decoration: underline;
+}

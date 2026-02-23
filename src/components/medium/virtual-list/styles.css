@@ -1,0 +1,131 @@
+/* Virtual List Styles */
+
+.vl-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.vl-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ─── Stats bar ─────────────────────────────────── */
+
+.vl-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #888;
+}
+
+.vl-stat-highlight {
+  color: #6c3483;
+  font-weight: 700;
+}
+
+/* ─── Search ────────────────────────────────────── */
+
+.vl-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.vl-search-icon {
+  color: #888;
+}
+
+.vl-search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.vl-search-input:focus {
+  outline: none;
+  border-color: #6c3483;
+}
+
+/* ─── Viewport (scrollable container) ───────────── */
+
+.vl-viewport {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow-y: auto;
+  position: relative;
+  background: #fafafa;
+}
+
+/* Inner container — its height = totalItems * rowHeight */
+.vl-inner {
+  position: relative;
+}
+
+/* ─── Row ───────────────────────────────────────── */
+
+.vl-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  transition: background-color 0.1s;
+}
+
+.vl-row:hover {
+  background: #f5f0fa;
+}
+
+.vl-row-index {
+  width: 50px;
+  font-size: 11px;
+  color: #aaa;
+  font-family: "Courier New", monospace;
+  flex-shrink: 0;
+}
+
+.vl-row-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.vl-row-dept {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e8daef;
+  color: #6c3483;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.vl-row-salary {
+  width: 70px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  flex-shrink: 0;
+}
+
+/* ─── Empty state ───────────────────────────────── */
+
+.vl-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 13px;
+}

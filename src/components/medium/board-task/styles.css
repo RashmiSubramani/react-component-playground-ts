@@ -1,0 +1,146 @@
+/* Task Board Styles */
+
+.tb-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Input row ──────────────────────────────────── */
+
+.tb-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tb-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tb-input:focus {
+  outline: none;
+  border-color: #6495ed;
+}
+
+.tb-add-btn {
+  padding: 8px 16px;
+  background-color: #6495ed;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tb-add-btn:hover {
+  background-color: #4a7bd9;
+}
+
+/* ─── Board layout ───────────────────────────────── */
+
+.tb-board {
+  display: flex;
+  gap: 16px;
+}
+
+.tb-column {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.tb-col-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #444;
+}
+
+/* ─── Task cards ─────────────────────────────────── */
+
+.tb-card {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.tb-task-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.tb-edit-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.tb-edit-input:focus {
+  outline: none;
+  border-color: #6495ed;
+}
+
+/* ─── Action buttons ─────────────────────────────── */
+
+.tb-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.tb-move-btn {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tb-move-btn:hover {
+  background-color: #1e7e34;
+}
+
+.tb-edit-btn {
+  padding: 5px 10px;
+  background-color: #daa520;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tb-edit-btn:hover {
+  background-color: #c49000;
+}
+
+.tb-delete-btn {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tb-delete-btn:hover {
+  background-color: #c82333;
+}

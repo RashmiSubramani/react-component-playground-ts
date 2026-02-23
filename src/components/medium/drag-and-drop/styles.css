@@ -1,0 +1,94 @@
+/* Drag & Drop Styles */
+
+.dd-wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.dd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #d1d9e6;
+  padding-bottom: 10px;
+}
+
+/* ─── Reset button ───────────────────────────────── */
+
+.dd-reset-btn {
+  background-color: #374151;
+  color: #f3f4f6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.dd-reset-btn:hover {
+  background-color: #1f2937;
+}
+
+/* ─── Columns ────────────────────────────────────── */
+
+.dd-columns {
+  display: flex;
+  gap: 8px;
+}
+
+.dd-column {
+  background: #fff;
+  padding: 24px 28px;
+  width: 48%;
+  min-height: 360px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.07);
+  border: 1px solid #cbd5e1;
+  transition: border-color 0.3s;
+}
+
+.dd-drop-zone {
+  border: 2px dashed #4b5563;
+}
+
+.dd-column:hover {
+  border-color: #4b5563;
+}
+
+/* ─── Draggable items ────────────────────────────── */
+
+.dd-item {
+  background: #c8e0f9;
+  margin: 14px 0;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  font-size: 15px;
+  color: #374151;
+  box-shadow: 0 3px 8px rgb(100 116 139 / 0.1);
+  transition: background-color 0.25s, box-shadow 0.25s;
+  border: 1px solid transparent;
+}
+
+.dd-item:active {
+  cursor: grabbing;
+  background-color: #e5e7eb;
+  box-shadow: 0 8px 16px rgb(100 116 139 / 0.2);
+  border-color: #9ca3af;
+}
+
+/* ─── Empty state ────────────────────────────────── */
+
+.dd-empty {
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 36px;
+  font-size: 14px;
+  text-align: center;
+}

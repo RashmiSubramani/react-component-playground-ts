@@ -1,0 +1,236 @@
+/* Modal / Dialog Styles */
+
+.md-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.md-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ─── Trigger buttons ───────────────────────────── */
+
+.md-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.md-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.md-btn-primary {
+  background: #6c3483;
+  color: #fff;
+}
+
+.md-btn-primary:hover {
+  background: #5b2c6f;
+}
+
+.md-btn-danger {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.md-btn-danger:hover {
+  background: #c0392b;
+}
+
+.md-btn-info {
+  background: #2980b9;
+  color: #fff;
+}
+
+.md-btn-info:hover {
+  background: #1f6fa5;
+}
+
+/* ─── Overlay ───────────────────────────────────── */
+
+.md-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: md-fade-in 0.2s ease;
+}
+
+@keyframes md-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─── Modal box ─────────────────────────────────── */
+
+.md-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: md-slide-up 0.25s ease;
+}
+
+@keyframes md-slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.md-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.md-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.md-close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888;
+  padding: 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.md-close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.md-modal-body {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.md-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.md-btn-cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.md-btn-cancel:hover {
+  background: #ccc;
+}
+
+.md-btn-confirm {
+  background: #27ae60;
+  color: #fff;
+}
+
+.md-btn-confirm:hover {
+  background: #1e8449;
+}
+
+/* ─── Form inside modal ─────────────────────────── */
+
+.md-form-group {
+  margin-bottom: 14px;
+}
+
+.md-form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.md-form-input {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.md-form-input:focus {
+  outline: none;
+  border-color: #6c3483;
+}
+
+/* ─── Log ───────────────────────────────────────── */
+
+.md-log {
+  margin-top: 16px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.md-log-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #555;
+}
+
+.md-log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.md-log-item {
+  font-size: 12px;
+  color: #666;
+  font-family: "Courier New", monospace;
+}

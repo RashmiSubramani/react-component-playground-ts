@@ -1,0 +1,178 @@
+/* Transfer List Styles */
+
+.tl-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tl-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ─── Layout ────────────────────────────────────── */
+
+.tl-layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+/* ─── Panel (left / right list) ─────────────────── */
+
+.tl-panel {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tl-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tl-panel-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.tl-panel-count {
+  font-size: 11px;
+  color: #888;
+  background: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.tl-select-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tl-select-all:hover {
+  background: #f9f5fc;
+}
+
+.tl-select-all input {
+  accent-color: #6c3483;
+}
+
+.tl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.tl-item:hover {
+  background: #f5f0fa;
+}
+
+.tl-item input {
+  accent-color: #6c3483;
+}
+
+.tl-item-selected {
+  background: #f3e8ff;
+}
+
+.tl-empty {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ─── Transfer buttons (center column) ──────────── */
+
+.tl-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 60px;
+}
+
+.tl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 44px;
+  height: 36px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+.tl-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.tl-btn-right {
+  background: #6c3483;
+  color: #fff;
+}
+
+.tl-btn-right:hover:not(:disabled) {
+  background: #5b2c6f;
+}
+
+.tl-btn-left {
+  background: #2980b9;
+  color: #fff;
+}
+
+.tl-btn-left:hover:not(:disabled) {
+  background: #1f6fa5;
+}
+
+.tl-btn-all-right {
+  background: #8e44ad;
+  color: #fff;
+}
+
+.tl-btn-all-right:hover:not(:disabled) {
+  background: #7d3c98;
+}
+
+.tl-btn-all-left {
+  background: #3498db;
+  color: #fff;
+}
+
+.tl-btn-all-left:hover:not(:disabled) {
+  background: #2e86c1;
+}

@@ -1,0 +1,59 @@
+/* Image Cropper Styles */
+
+.ic-container {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ic-title {
+  text-align: center;
+  color: #333;
+}
+
+.ic-file-input {
+  font-size: 14px;
+}
+
+.ic-canvas {
+  border: 1px solid #ccc;
+  cursor: crosshair;
+  border-radius: 4px;
+}
+
+.ic-hidden-img {
+  display: none;
+}
+
+.ic-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.ic-btn:hover {
+  background-color: #0056b3;
+}
+
+.ic-result {
+  margin-top: 8px;
+}
+
+.ic-result h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.ic-cropped-img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 100%;
+}

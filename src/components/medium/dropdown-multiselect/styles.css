@@ -1,64 +1,147 @@
-/* Dropdown Multi-Select Styles */
+/* Multiselect Dropdown Styles */
 
-.dropdownDemo {
-  padding: 50px;
+.msd-container {
+  width: 280px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
 }
 
-.dropdown {
-  width: 250px;
+/* ─── Label ──────────────────────────────────────── */
+
+.msd-label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* ─── Dropdown wrapper ───────────────────────────── */
+
+.msd-wrapper {
   position: relative;
-  font-family: sans-serif;
-  outline: none;
+  margin-bottom: 12px;
 }
 
-.dropdown:focus {
-  outline: 2px solid #007bff;
-  border-radius: 4px;
-}
+/* ─── Toggle button ──────────────────────────────── */
 
-.dropdown-header {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-
-.dropdown-menu {
-  position: absolute;
+.msd-toggle {
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
-  margin-top: 4px;
-  max-height: 150px;
-  overflow-y: auto;
-  list-style: none;
-  padding: 0;
-  z-index: 10;
-}
-
-.dropdown-item {
-  padding: 10px;
-  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.dropdown-item:hover,
-.dropdown-item.active {
-  background-color: #f0f0f0;
-}
-
-.dropdown-item.selected {
-  background-color: #e8f4fd;
-}
-
-.multiselectCheckBox {
-  width: 14px;
-  height: 14px;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
   cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+}
+
+.msd-toggle:hover {
+  border-color: #999;
+}
+
+.msd-icon {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+.msd-icon-open {
+  transform: rotate(180deg);
+}
+
+/* ─── Menu ───────────────────────────────────────── */
+
+.msd-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 999;
+  list-style: none;
+  padding: 0;
+}
+
+/* ─── Reset item ─────────────────────────────────── */
+
+.msd-reset {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.msd-reset:hover {
+  background: #f0f0f0;
+}
+
+/* ─── Option items ───────────────────────────────── */
+
+.msd-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.msd-option:hover {
+  background: #f5f5f5;
+}
+
+.msd-option input[type="checkbox"] {
+  pointer-events: none;
+}
+
+.msd-option-label {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+/* ─── Error ──────────────────────────────────────── */
+
+.msd-error {
+  color: #dc3545;
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+/* ─── Submit button ──────────────────────────────── */
+
+.msd-submit {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.msd-submit:hover {
+  background: #0056b3;
+}
+
+/* ─── Result area ────────────────────────────────── */
+
+.msd-result {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f0f8ff;
+  border: 1px solid #b8daff;
+  border-radius: 4px;
+  font-size: 14px;
 }

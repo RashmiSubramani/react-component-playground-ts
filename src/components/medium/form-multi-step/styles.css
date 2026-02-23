@@ -1,0 +1,105 @@
+/* Multi-Step Form Styles */
+
+.msf-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.msf-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.msf-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.msf-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.msf-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.msf-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.msf-error {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+.msf-error-text {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+textarea.msf-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+select.msf-input {
+  cursor: pointer;
+}
+
+/* Checkbox group for multi-select */
+.msf-checkbox-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.msf-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.msf-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.msf-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.msf-btn.secondary {
+  background: #6c757d;
+}
+
+.msf-btn:hover {
+  opacity: 0.9;
+}

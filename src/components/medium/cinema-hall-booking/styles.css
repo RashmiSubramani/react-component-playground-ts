@@ -1,0 +1,118 @@
+/* Cinema Hall Booking Styles */
+
+.ch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Action buttons ─────────────────────────────── */
+
+.ch-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ch-btn {
+  padding: 8px 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #f8f9fa;
+}
+
+.ch-btn:hover {
+  background: #e9ecef;
+}
+
+.ch-book {
+  background: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
+
+.ch-book:hover {
+  background: #1e7e34;
+}
+
+.ch-reset {
+  background: #dc3545;
+  color: #fff;
+  border-color: #dc3545;
+}
+
+.ch-reset:hover {
+  background: #c82333;
+}
+
+/* ─── Seat grid ──────────────────────────────────── */
+
+.ch-hall {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.ch-row {
+  display: flex;
+  gap: 6px;
+}
+
+.ch-col {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+/* Available seat (default) */
+.ch-seat {
+  background: #e9ecef;
+}
+
+.ch-seat:hover {
+  background: #ced4da;
+}
+
+/* Selected (clicked but not booked) */
+.ch-selected {
+  background: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
+
+/* Booked (greyed out, not clickable) */
+.ch-disabled {
+  background: #6c757d;
+  color: #fff;
+  border-color: #6c757d;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* ─── Screen indicator ───────────────────────────── */
+
+.ch-screen {
+  width: 60%;
+  text-align: center;
+  padding: 6px 0;
+  background: #343a40;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
