@@ -15,12 +15,12 @@
   4. "Next" advances the step; last step shows "Finish" → marks complete
   5. Active step's Component is rendered below the stepper
 */
-
 import { useEffect, useRef, useState } from "react";
 import "./styles.css";
 
 // ─── Types ────────────────────────────────────────────────────────
 
+// Each step has a name and a component that renders its content
 type StepConfig = {
   name: string;
   Component: React.ComponentType;
@@ -28,6 +28,7 @@ type StepConfig = {
 
 // ─── Config ───────────────────────────────────────────────────────
 
+// Steps in the stepper — you can add/remove steps easily
 const stepsConfig: StepConfig[] = [
   {
     name: "Customer Info",
@@ -47,21 +48,23 @@ const stepsConfig: StepConfig[] = [
   },
 ];
 
-// ─── Component ────────────────────────────────────────────────────
+// ─── Stepper Component ────────────────────────────────────────────
 
 function Stepper() {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [isComplete, setIsComplete] = useState(false);
-  const [margins, setMargins] = useState({ marginLeft: 0, marginRight: 0 });
+  const [currentStep, setCurrentStep] = useState(1); // Current active step (1-indexed)
+  const [isComplete, setIsComplete] = useState(false); // Flag to know when the stepper is completed
+  const [margins, setMargins] = useState({ marginLeft: 0, marginRight: 0 }); // Margins for the progress bar to align with step circles
 
-  // Mutable ref array — one slot per step for DOM measurement
+  // Mutable array of refs — one per step to get DOM measurements
   const stepRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Calculate progress bar margins from first/last step widths
+  // ── Calculate progress bar margins once the component mounts
   useEffect(() => {
-    const first = stepRef.current[0];
-    const last = stepRef.current[stepsConfig.length - 1];
+    const first = stepRef.current[0]; // First step circle
+    const last = stepRef.current[stepsConfig.length - 1]; // Last step circle
+
     if (first && last) {
+      // Margin = half of first/last circle width so progress bar aligns perfectly
       setMargins({
         marginLeft: first.offsetWidth / 2,
         marginRight: last.offsetWidth / 2,
@@ -69,11 +72,14 @@ function Stepper() {
     }
   }, []);
 
+  // Guard for empty stepsConfig
   if (!stepsConfig.length) return null;
 
+  // ── Navigate to next step
   function handleNext() {
     setCurrentStep((prevStep) => {
       if (prevStep === stepsConfig.length) {
+        // Last step → mark complete
         setIsComplete(true);
         return prevStep;
       }
@@ -81,20 +87,23 @@ function Stepper() {
     });
   }
 
+  // ── Calculate progress percentage for inner progress div
   function calculateProgressBarWidth(): number {
     return ((currentStep - 1) / (stepsConfig.length - 1)) * 100;
   }
 
+  // Get the component for the active step
   const ActiveComponent = stepsConfig[currentStep - 1]?.Component;
 
   return (
     <>
-      {/* Stepper header */}
+      {/* ── Stepper Header ── */}
       <div className="stp-stepper">
         {stepsConfig.map((step, index) => (
           <div
             key={step.name}
             ref={(el) => {
+              // Store each step's DOM element in ref array for measurement
               stepRef.current[index] = el;
             }}
             className={`stp-step ${
@@ -103,6 +112,7 @@ function Stepper() {
           >
             {/* Step circle */}
             <div className="stp-number">
+              {/* Show checkmark if completed */}
               {currentStep > index + 1 || isComplete ? (
                 <span>&#10003;</span>
               ) : (
@@ -115,15 +125,17 @@ function Stepper() {
           </div>
         ))}
 
-        {/* Progress bar */}
+        {/* ── Progress bar container ── */}
         <div
           className="stp-progress-bar"
           style={{
+            // Total width minus first/last step margins
             width: `calc(100% - ${margins.marginLeft + margins.marginRight}px)`,
             marginLeft: margins.marginLeft,
             marginRight: margins.marginRight,
           }}
         >
+          {/* Inner progress bar showing actual progress */}
           <div
             className="stp-progress"
             style={{ width: `${calculateProgressBarWidth()}%` }}
@@ -131,12 +143,13 @@ function Stepper() {
         </div>
       </div>
 
-      {/* Current step content */}
+      {/* ── Current step content ── */}
       {ActiveComponent && <ActiveComponent />}
 
-      {/* Navigation button */}
+      {/* ── Navigation button ── */}
       {!isComplete && (
         <button className="stp-btn" onClick={handleNext}>
+          {/* Change text on last step */}
           {currentStep === stepsConfig.length ? "Finish" : "Next"}
         </button>
       )}
