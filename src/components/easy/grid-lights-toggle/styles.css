@@ -1,0 +1,73 @@
+/* Grid Lights Toggle Styles */
+
+.glt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.glt-hint {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+/* ─── Actions ────────────────────────────────────── */
+
+.glt-actions {
+  margin-bottom: 20px;
+}
+
+.glt-reset-btn {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.glt-reset-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ─── Grid ───────────────────────────────────────── */
+
+.glt-grid {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.glt-row {
+  display: flex;
+  gap: 4px;
+}
+
+.glt-cell {
+  width: 48px;
+  height: 48px;
+  background-color: #e0e0e0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.glt-cell:hover {
+  background-color: #ccc;
+}
+
+/* ON state */
+.glt-on {
+  background-color: gold;
+  border-color: #daa520;
+}
+
+.glt-on:hover {
+  background-color: #e6c200;
+}
