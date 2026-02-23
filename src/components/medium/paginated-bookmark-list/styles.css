@@ -1,0 +1,117 @@
+/* Paginated Bookmark List Styles */
+
+.pbl-container {
+  width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Header ─────────────────────────────────────── */
+
+.pbl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pbl-header h2 {
+  margin: 0;
+}
+
+.pbl-filter-label {
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ─── Article cards ──────────────────────────────── */
+
+.pbl-card {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+}
+
+.pbl-card h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.pbl-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ─── Bookmark star ──────────────────────────────── */
+
+.pbl-star {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.pbl-star:hover {
+  transform: scale(1.2);
+}
+
+.pbl-star-active {
+  color: gold;
+}
+
+/* ─── Empty state ────────────────────────────────── */
+
+.pbl-empty {
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+/* ─── Pagination ─────────────────────────────────── */
+
+.pbl-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pbl-pagination button {
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background: #fafafa;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.pbl-pagination button:hover:not(:disabled) {
+  background: #eaeaea;
+}
+
+.pbl-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pbl-pagination span {
+  font-size: 14px;
+  color: #333;
+}

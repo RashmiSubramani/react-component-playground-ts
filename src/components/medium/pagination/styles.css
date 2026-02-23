@@ -1,0 +1,58 @@
+/* Pagination Styles */
+
+.productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paginationControls {
+  padding: 40px;
+}
+
+.pageNumber {
+  font-size: 1.25rem;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.pageNumberActive {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navButton {
+  cursor: pointer;
+  padding: 0 16px;
+}
+
+/* Product Card */
+
+.productCard {
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 240px;
+}
+
+.productCard img {
+  height: 192px;
+  object-fit: contain;
+  width: 240px;
+}
+
+.productTitle {
+  font-weight: bold;
+  padding: 8px;
+  font-size: 1rem;
+  width: 240px;
+}
+
+.productPrice {
+  padding: 8px;
+  font-size: 1.125rem;
+}
+
+.productDiscount {
+  padding: 8px;
+}
