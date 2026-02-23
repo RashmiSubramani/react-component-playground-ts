@@ -1,0 +1,118 @@
+/* ─── RESET & BASE ──────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #213547;
+  background-color: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* ─── APP LAYOUT ────────────────────────────────────── */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ─── SIDEBAR ───────────────────────────────────────── */
+.sidebar {
+  width: 260px;
+  background: #1a1a2e;
+  color: #eee;
+  padding: 20px 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar h1 {
+  font-size: 1.2rem;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 12px;
+}
+
+.sidebar h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  padding: 12px 20px 6px;
+}
+
+/* ─── NAV LINKS ─────────────────────────────────────── */
+/* NavLink gets "active" class automatically from react-router */
+.sidebar a {
+  display: block;
+  padding: 8px 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar a:hover {
+  background: #16213e;
+  color: #fff;
+}
+
+/* .active is added by NavLink when the route matches */
+.sidebar a.active {
+  background: #0f3460;
+  color: #e94560;
+  font-weight: 600;
+  border-left: 3px solid #e94560;
+}
+
+/* ─── MAIN CONTENT ──────────────────────────────────── */
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* ─── HOME PAGE ─────────────────────────────────────── */
+.home h2 {
+  margin-bottom: 16px;
+}
+
+.home ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home li {
+  padding: 6px 0;
+}
+
+.concept-tag {
+  display: inline-block;
+  background: #e8f4fd;
+  color: #0f3460;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-left: 8px;
+}
+
+/* ─── 404 PAGE ──────────────────────────────────────── */
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found h2 {
+  font-size: 4rem;
+  color: #e94560;
+}
