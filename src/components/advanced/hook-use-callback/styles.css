@@ -1,0 +1,143 @@
+/* Hook: useCallback Styles */
+
+.hucb-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hucb-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.hucb-render-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #fff8e1;
+  border: 1px dashed #f5a623;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f5a623;
+  margin-bottom: 12px;
+}
+
+.hucb-hint {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  margin: 6px 0 16px;
+}
+
+/* ─── Buttons ────────────────────────────────────── */
+
+.hucb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.hucb-counter-btn {
+  background: #6c3483;
+  color: #fff;
+}
+
+.hucb-counter-btn:hover {
+  background: #5b2c6f;
+}
+
+.hucb-child-btn {
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.hucb-child-btn:hover {
+  background: #555;
+}
+
+/* ─── Comparison cards ───────────────────────────── */
+
+.hucb-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.hucb-card {
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.hucb-card h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
+.hucb-card-stable {
+  background: #d5f5e3;
+  border: 1px solid #27ae60;
+}
+
+.hucb-card-unstable {
+  background: #fdedec;
+  border: 1px solid #e74c3c;
+}
+
+/* ─── Memo'd child ───────────────────────────────── */
+
+.hucb-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hucb-child-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.hucb-render-count {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: "Courier New", monospace;
+  color: #333;
+}
+
+/* ─── Items ──────────────────────────────────────── */
+
+.hucb-items {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.hucb-items h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.hucb-item {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #e8daef;
+  color: #6c3483;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 2px 4px 2px 0;
+}

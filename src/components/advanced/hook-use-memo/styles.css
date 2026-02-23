@@ -1,0 +1,228 @@
+/* Hook: useMemo Styles */
+
+.hum-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hum-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ─── Unrelated counter ──────────────────────────── */
+
+.hum-counter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #fff8e1;
+  border: 1px dashed #f5a623;
+  border-radius: 6px;
+}
+
+.hum-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.hum-counter-btn {
+  background: #f5a623;
+  color: #fff;
+}
+
+.hum-counter-btn:hover {
+  background: #e09500;
+}
+
+.hum-counter-hint {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+/* ─── Controls ───────────────────────────────────── */
+
+.hum-controls {
+  margin-bottom: 16px;
+}
+
+.hum-search {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.hum-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.hum-input {
+  width: 100%;
+  padding: 9px 10px 9px 32px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.hum-input:focus {
+  outline: none;
+  border-color: #6c3483;
+}
+
+.hum-filters-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hum-select {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.hum-select:focus {
+  outline: none;
+  border-color: #6c3483;
+}
+
+.hum-sort-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  color: #555;
+  transition: background 0.15s;
+}
+
+.hum-sort-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ─── Stats panel ────────────────────────────────── */
+
+.hum-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.hum-stat {
+  flex: 1;
+  min-width: 100px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.hum-stat-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.hum-stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* ─── Table ──────────────────────────────────────── */
+
+.hum-table-wrap {
+  overflow-x: auto;
+}
+
+.hum-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.hum-table th {
+  text-align: left;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.hum-table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hum-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.hum-cell-id {
+  color: #bbb;
+  width: 40px;
+}
+
+.hum-cell-salary {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.hum-dept-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e8daef;
+  color: #6c3483;
+  font-weight: 600;
+}
+
+.hum-empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 30px 0;
+}
+
+.hum-truncated {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
