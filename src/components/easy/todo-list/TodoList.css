@@ -1,0 +1,77 @@
+/* Wrapper */
+.todo-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+/* Input Row */
+.todo-input-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.todo-input {
+  padding: 6px 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 10px;
+}
+
+.todo-add-btn {
+  padding: 6px 12px;
+  font-size: 15px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.todo-add-btn:hover {
+  background: #f3f3f3;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: disc;
+  margin-left: 40px;
+  padding-left: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Checkbox */
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+/* Todo Text — strikethrough for completed items */
+.todo-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+/* Delete Button */
+.todo-delete-btn {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.todo-delete-btn:hover {
+  background: #f3f3f3;
+}

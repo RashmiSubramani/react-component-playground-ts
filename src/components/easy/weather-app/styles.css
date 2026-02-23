@@ -1,0 +1,50 @@
+/* Weather App Styles */
+
+.wa-container {
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.wa-search {
+  margin-bottom: 20px;
+}
+
+.wa-input {
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.wa-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.wa-btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.wa-btn:hover {
+  background-color: #0056b3;
+}
+
+.wa-card {
+  background: #f3f3f3;
+  padding: 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.wa-error {
+  color: red;
+}
