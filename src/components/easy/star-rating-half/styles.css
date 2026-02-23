@@ -1,0 +1,62 @@
+/* Half Star Rating Styles */
+
+.srh-container {
+  max-width: 340px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Stars row ──────────────────────────────────── */
+
+.srh-stars {
+  display: inline-flex;
+  gap: 4px;
+  margin: 16px 0;
+}
+
+.srh-star {
+  cursor: pointer;
+  padding: 4px;
+  color: #ccc;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 0;
+}
+
+.srh-star:hover {
+  transform: scale(1.15);
+}
+
+.srh-star-active {
+  color: #f5a623;
+}
+
+/* ─── Label ──────────────────────────────────────── */
+
+.srh-label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* ─── Reset button ───────────────────────────────── */
+
+.srh-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #757575;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.srh-reset:hover {
+  background-color: #616161;
+}

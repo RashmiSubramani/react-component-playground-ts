@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.outer {
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.inner {
+  background-color: green;
+  width: 50%;
+  color: white;
+  text-align: right;
+  /* since we have added translateX in styles, the filled bar moved to the left so need to push content to right end */
+  transition: 0.5s ease-in;
+}
