@@ -1,0 +1,56 @@
+/* Auto-Save Form Styles */
+
+.asf-container {
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.asf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.asf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.asf-label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.asf-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.asf-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.asf-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.asf-btn {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.asf-btn:hover {
+  background-color: #c82333;
+}
