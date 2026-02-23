@@ -6,6 +6,11 @@
   navigation and routes are generated automatically from this list.
 
   This is the ONLY file you need to edit when adding a new component.
+
+  NAMING CONVENTION:
+  Related components are prefixed with a group name for easy discovery.
+  Format: "Group - Component"  (e.g. "Form - Dynamic", "Dropdown - Basic")
+  Standalone components keep their plain name (e.g. "Accordion", "Feed").
 */
 
 import { lazy } from "react";
@@ -52,39 +57,40 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Auto-Save Form",
-    path: "autosave-form",
-    difficulty: "easy",
-    component: lazy(
-      () => import("../components/easy/autosave-form/AutoSaveForm"),
-    ),
-    concepts: [
-      "typed FormData object",
-      "localStorage get/set + JSON",
-      "loaded flag pattern",
-      "ChangeEvent union (Input | Textarea)",
-    ],
-  },
-  {
-    name: "Breadcrumb",
+    name: "Breadcrumb - Basic",
     path: "breadcrumb",
     difficulty: "easy",
     component: lazy(
-      () => import("../components/easy/breadcrumb/BreadcrumbBasic"),
+      () => import("../components/easy/breadcrumb-basic/BreadcrumbBasic"),
     ),
     concepts: ["typed array of objects", "conditional rendering", "aria-label"],
   },
   {
-    name: "Cards Carousel",
+    name: "Carousel - Cards",
     path: "cards-carousel",
     difficulty: "easy",
     component: lazy(
-      () => import("../components/easy/cards-carousel/CardsCarousel"),
+      () => import("../components/easy/carousel-cards/CardsCarousel"),
     ),
     concepts: [
       "typed Card object",
       "index-based navigation",
       "disabled boundary guards",
+    ],
+  },
+  {
+    name: "Carousel - Image",
+    path: "image-carousel",
+    difficulty: "easy",
+    component: lazy(
+      () =>
+        import("../components/easy/carousel-image/ImageCarousel"),
+    ),
+    concepts: [
+      "typed CarouselImage object",
+      "circular index wrapping",
+      "dot indicators",
+      "direct index navigation",
     ],
   },
   {
@@ -97,35 +103,13 @@ export const componentRegistry: ComponentEntry[] = [
     concepts: ["KeyboardEvent", "duplicate prevention", "slice/filter"],
   },
   {
-    name: "Comments",
+    name: "Comments - Basic",
     path: "comments",
     difficulty: "easy",
     component: lazy(
-      () => import("../components/easy/comments/Comments"),
+      () => import("../components/easy/comments-basic/Comments"),
     ),
     concepts: ["recursive type", "recursive component", "optional chaining"],
-  },
-  {
-    name: "Count-Up Timer",
-    path: "countup-timer",
-    difficulty: "easy",
-    component: lazy(
-      () => import("../components/easy/countup-timer/CountUpTimer"),
-    ),
-    concepts: [
-      "useRef<ReturnType<typeof setInterval>>",
-      "conditional interval",
-      "padStart",
-    ],
-  },
-  {
-    name: "Countdown Timer",
-    path: "countdown-timer",
-    difficulty: "easy",
-    component: lazy(
-      () => import("../components/easy/countdown-timer/CountdownTimer"),
-    ),
-    concepts: ["TimeLeft | null", "setInterval + cleanup", "Date math"],
   },
   {
     name: "Feed",
@@ -135,7 +119,21 @@ export const componentRegistry: ComponentEntry[] = [
     concepts: ["typed Post object", "FormEvent", "toggle like", "immutable map"],
   },
   {
-    name: "Grid Lights",
+    name: "Form - Auto-Save",
+    path: "autosave-form",
+    difficulty: "easy",
+    component: lazy(
+      () => import("../components/easy/form-auto-save/AutoSaveForm"),
+    ),
+    concepts: [
+      "typed FormData object",
+      "localStorage get/set + JSON",
+      "loaded flag pattern",
+      "ChangeEvent union (Input | Textarea)",
+    ],
+  },
+  {
+    name: "Grid - Lights",
     path: "grid-lights",
     difficulty: "easy",
     component: lazy(
@@ -149,7 +147,7 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Grid Lights Toggle",
+    name: "Grid - Lights Toggle",
     path: "grid-lights-toggle",
     difficulty: "easy",
     component: lazy(
@@ -163,23 +161,6 @@ export const componentRegistry: ComponentEntry[] = [
       "directional offsets for neighbors",
       "boundary checking",
       "toggle 0↔1",
-    ],
-  },
-  {
-    name: "Half Star Rating",
-    path: "star-rating-half",
-    difficulty: "easy",
-    component: lazy(
-      () =>
-        import(
-          "../components/easy/star-rating-half/StarRatingHalf"
-        ),
-    ),
-    concepts: [
-      "getBoundingClientRect half detection",
-      "onMouseMove per-star hover",
-      "FaStar / FaStarHalfAlt / FaRegStar",
-      "e.currentTarget for reliable bounds",
     ],
   },
   {
@@ -198,22 +179,7 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Image Carousel",
-    path: "image-carousel",
-    difficulty: "easy",
-    component: lazy(
-      () =>
-        import("../components/easy/image-carousel/ImageCarousel"),
-    ),
-    concepts: [
-      "typed CarouselImage object",
-      "circular index wrapping",
-      "dot indicators",
-      "direct index navigation",
-    ],
-  },
-  {
-    name: "Image Gallery",
+    name: "Image - Gallery",
     path: "image-gallery",
     difficulty: "easy",
     component: lazy(
@@ -228,7 +194,7 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Image Slider",
+    name: "Image - Slider",
     path: "image-slider",
     difficulty: "easy",
     component: lazy(
@@ -248,6 +214,37 @@ export const componentRegistry: ComponentEntry[] = [
       () => import("../components/easy/progress-bar/ProgressBar"),
     ),
     concepts: ["useState", "useEffect", "inline styles", "ARIA accessibility"],
+  },
+  {
+    name: "Rating - Half Star",
+    path: "star-rating-half",
+    difficulty: "easy",
+    component: lazy(
+      () =>
+        import(
+          "../components/easy/rating-half-star/StarRatingHalf"
+        ),
+    ),
+    concepts: [
+      "getBoundingClientRect half detection",
+      "onMouseMove per-star hover",
+      "FaStar / FaStarHalfAlt / FaRegStar",
+      "e.currentTarget for reliable bounds",
+    ],
+  },
+  {
+    name: "Rating - Star",
+    path: "star-rating",
+    difficulty: "easy",
+    component: lazy(
+      () => import("../components/easy/rating-star/StarRating"),
+    ),
+    concepts: [
+      "hover preview with onMouseEnter/Leave",
+      "FaStar / FaRegStar icon toggle",
+      "Array.from star generation",
+      "aria-label accessibility",
+    ],
   },
   {
     name: "Slider",
@@ -293,25 +290,33 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Star Rating",
-    path: "star-rating",
+    name: "Timer - Count-Up",
+    path: "countup-timer",
     difficulty: "easy",
     component: lazy(
-      () => import("../components/easy/star-rating/StarRating"),
+      () => import("../components/easy/timer-count-up/CountUpTimer"),
     ),
     concepts: [
-      "hover preview with onMouseEnter/Leave",
-      "FaStar / FaRegStar icon toggle",
-      "Array.from star generation",
-      "aria-label accessibility",
+      "useRef<ReturnType<typeof setInterval>>",
+      "conditional interval",
+      "padStart",
     ],
   },
   {
-    name: "Stopwatch",
+    name: "Timer - Countdown",
+    path: "countdown-timer",
+    difficulty: "easy",
+    component: lazy(
+      () => import("../components/easy/timer-countdown/CountdownTimer"),
+    ),
+    concepts: ["TimeLeft | null", "setInterval + cleanup", "Date math"],
+  },
+  {
+    name: "Timer - Stopwatch",
     path: "stopwatch",
     difficulty: "easy",
     component: lazy(
-      () => import("../components/easy/stopwatch/Stopwatch"),
+      () => import("../components/easy/timer-stopwatch/Stopwatch"),
     ),
     concepts: [
       "conditional setInterval",
@@ -321,14 +326,14 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Todo List",
+    name: "Todo - List",
     path: "todo-list",
     difficulty: "easy",
     component: lazy(() => import("../components/easy/todo-list/TodoList")),
     concepts: ["useState", "typed arrays", "immutable updates", "filter/map"],
   },
   {
-    name: "Todo With Timer",
+    name: "Todo - With Timer",
     path: "todo-with-timer",
     difficulty: "easy",
     component: lazy(
@@ -402,49 +407,35 @@ export const componentRegistry: ComponentEntry[] = [
 
   // ─── MEDIUM ──────────────────────────────────────────────────
   {
-    name: "Accessible Form",
-    path: "accessible-form",
+    name: "Board - Kanban",
+    path: "kanban-board",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/accessible-form/AccessibleForm"),
+      () => import("../components/medium/board-kanban/KanbanBoard"),
     ),
     concepts: [
-      "typed mixed-value form data",
-      "ChangeEvent union (Input | Select | Textarea)",
-      "aria-invalid + aria-describedby",
-      "regex validation helpers",
+      "Record<ColumnId, Task[]>",
+      "HTML5 drag events",
+      "inline edit (Enter/blur)",
+      "useRef flag for double-fire prevention",
     ],
   },
   {
-    name: "API Pagination",
-    path: "api-pagination",
+    name: "Board - Task",
+    path: "task-board",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/api-pagination/ApiPagination"),
+      () => import("../components/medium/board-task/TaskBoard"),
     ),
     concepts: [
-      "typed API response (Product)",
-      "offset pagination (limit + skip)",
-      "useEffect dependency array",
-      "ProductCard sub-component",
+      "Task type with ColumnId status",
+      "indexOf + direction movement",
+      "inline edit (blur/Enter save)",
+      "filter-based column rendering",
     ],
   },
   {
-    name: "Autocomplete",
-    path: "autocomplete",
-    difficulty: "medium",
-    component: lazy(
-      () => import("../components/medium/autocomplete/Autocomplete"),
-    ),
-    concepts: [
-      "debounced API search (300ms)",
-      "keyboard nav (Arrow/Enter/Escape)",
-      "highlight matched text (regex split)",
-      "click-outside close (useRef)",
-    ],
-  },
-  {
-    name: "Breadcrumb App",
+    name: "Breadcrumb - App",
     path: "breadcrumb-app",
     difficulty: "medium",
     component: lazy(
@@ -459,11 +450,11 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Calendar",
+    name: "Calendar - Basic",
     path: "calendar",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/calendar/Calendar"),
+      () => import("../components/medium/calendar-basic/Calendar"),
     ),
     concepts: [
       "useState<Date | null>",
@@ -504,11 +495,11 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Dropdown",
+    name: "Dropdown - Basic",
     path: "dropdown",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/dropdown/Dropdown"),
+      () => import("../components/medium/dropdown-basic/Dropdown"),
     ),
     concepts: [
       "useRef<HTMLDivElement>",
@@ -518,12 +509,12 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Dropdown Multi-Select",
+    name: "Dropdown - Multi-Select",
     path: "dropdown-multiselect",
     difficulty: "medium",
     component: lazy(
       () =>
-        import("../components/medium/dropdown-multiselect/DropdownMultiSelect"),
+        import("../components/medium/dropdown-multi-select/DropdownMultiSelect"),
     ),
     concepts: [
       "union state (string[] | string | null)",
@@ -532,11 +523,42 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Dynamic Form",
+    name: "Dropdown - Multiselect",
+    path: "multiselect-dropdown",
+    difficulty: "medium",
+    component: lazy(
+      () =>
+        import(
+          "../components/medium/dropdown-multiselect/MultiselectDropdown"
+        ),
+    ),
+    concepts: [
+      "string[] selected state",
+      "click-outside close (useRef)",
+      "checkbox toggle (includes/filter)",
+      "submit validation + error state",
+    ],
+  },
+  {
+    name: "Form - Accessible",
+    path: "accessible-form",
+    difficulty: "medium",
+    component: lazy(
+      () => import("../components/medium/form-accessible/AccessibleForm"),
+    ),
+    concepts: [
+      "typed mixed-value form data",
+      "ChangeEvent union (Input | Select | Textarea)",
+      "aria-invalid + aria-describedby",
+      "regex validation helpers",
+    ],
+  },
+  {
+    name: "Form - Dynamic",
     path: "dynamic-form",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/dynamic-form/DynamicForm"),
+      () => import("../components/medium/form-dynamic/DynamicForm"),
     ),
     concepts: [
       "config-driven rendering",
@@ -547,7 +569,50 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Image Cropper",
+    name: "Form - Multi-Step",
+    path: "multi-step-form",
+    difficulty: "medium",
+    component: lazy(
+      () => import("../components/medium/form-multi-step/MultiStepForm"),
+    ),
+    concepts: [
+      "config-driven steps",
+      "step index navigation",
+      "per-step validation",
+      "Record<string, FormValue>",
+      "conditional field renderer",
+    ],
+  },
+  {
+    name: "Form - Tabs",
+    path: "tabs-form",
+    difficulty: "medium",
+    component: lazy(() => import("../components/medium/form-tabs/TabsForm")),
+    concepts: [
+      "config-driven UI",
+      "centralised state",
+      "per-tab validation",
+      "ComponentType<Props>",
+      "shared types",
+    ],
+  },
+  {
+    name: "Grid - Selectable",
+    path: "selectable-grid",
+    difficulty: "medium",
+    component: lazy(
+      () =>
+        import("../components/medium/grid-selectable/SelectableGrid"),
+    ),
+    concepts: [
+      "useCallback with deps",
+      "CSS custom properties cast",
+      "rectangular selection math",
+      "mouse drag event flow",
+    ],
+  },
+  {
+    name: "Image - Cropper",
     path: "image-cropper",
     difficulty: "medium",
     component: lazy(
@@ -559,35 +624,6 @@ export const componentRegistry: ComponentEntry[] = [
       "CropArea type",
       "FileReader result narrowing",
       "canvas drawImage + toDataURL",
-    ],
-  },
-  {
-    name: "Infinite Scroll",
-    path: "infinite-scroll",
-    difficulty: "medium",
-    component: lazy(
-      () =>
-        import("../components/medium/infinite-scroll/InfiniteScroll"),
-    ),
-    concepts: [
-      "IntersectionObserver API",
-      "useRef<HTMLDivElement> sentinel",
-      "paginated fetch (skip/limit)",
-      "useCallback stable handler",
-    ],
-  },
-  {
-    name: "Kanban Board",
-    path: "kanban-board",
-    difficulty: "medium",
-    component: lazy(
-      () => import("../components/medium/kanban-board/KanbanBoard"),
-    ),
-    concepts: [
-      "Record<ColumnId, Task[]>",
-      "HTML5 drag events",
-      "inline edit (Enter/blur)",
-      "useRef flag for double-fire prevention",
     ],
   },
   {
@@ -621,45 +657,41 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Multi-Step Form",
-    path: "multi-step-form",
+    name: "Pagination - API",
+    path: "api-pagination",
     difficulty: "medium",
     component: lazy(
-      () => import("../components/medium/multi-step-form/MultiStepForm"),
+      () => import("../components/medium/pagination-api/ApiPagination"),
     ),
     concepts: [
-      "config-driven steps",
-      "step index navigation",
-      "per-step validation",
-      "Record<string, FormValue>",
-      "conditional field renderer",
+      "typed API response (Product)",
+      "offset pagination (limit + skip)",
+      "useEffect dependency array",
+      "ProductCard sub-component",
     ],
   },
   {
-    name: "Multiselect Dropdown",
-    path: "multiselect-dropdown",
+    name: "Pagination - Basic",
+    path: "pagination",
     difficulty: "medium",
     component: lazy(
-      () =>
-        import(
-          "../components/medium/multiselect-dropdown/MultiselectDropdown"
-        ),
+      () => import("../components/medium/pagination-basic/Pagination"),
     ),
     concepts: [
-      "string[] selected state",
-      "click-outside close (useRef)",
-      "checkbox toggle (includes/filter)",
-      "submit validation + error state",
+      "typed API response",
+      "async/await fetch",
+      "offset pagination",
+      "frontend pagination (alt)",
     ],
   },
   {
-    name: "Paginated Bookmark List",
+    name: "Pagination - Bookmark List",
     path: "paginated-bookmark-list",
     difficulty: "medium",
     component: lazy(
       () =>
         import(
-          "../components/medium/paginated-bookmark-list/PaginatedBookmarkList"
+          "../components/medium/pagination-bookmark-list/PaginatedBookmarkList"
         ),
     ),
     concepts: [
@@ -670,40 +702,40 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "Pagination",
-    path: "pagination",
-    difficulty: "medium",
-    component: lazy(
-      () => import("../components/medium/pagination/Pagination"),
-    ),
-    concepts: [
-      "typed API response",
-      "async/await fetch",
-      "offset pagination",
-      "frontend pagination (alt)",
-    ],
-  },
-  {
-    name: "Search (Debounce + Cache)",
-    path: "search",
-    difficulty: "medium",
-    component: lazy(() => import("../components/medium/search/Search")),
-    concepts: ["useEffect", "debounce", "caching", "async/await", "cleanup"],
-  },
-  {
-    name: "Selectable Grid",
-    path: "selectable-grid",
+    name: "Pagination - Infinite Scroll",
+    path: "infinite-scroll",
     difficulty: "medium",
     component: lazy(
       () =>
-        import("../components/medium/selectable-grid/SelectableGrid"),
+        import("../components/medium/pagination-infinite-scroll/InfiniteScroll"),
     ),
     concepts: [
-      "useCallback with deps",
-      "CSS custom properties cast",
-      "rectangular selection math",
-      "mouse drag event flow",
+      "IntersectionObserver API",
+      "useRef<HTMLDivElement> sentinel",
+      "paginated fetch (skip/limit)",
+      "useCallback stable handler",
     ],
+  },
+  {
+    name: "Search - Autocomplete",
+    path: "autocomplete",
+    difficulty: "medium",
+    component: lazy(
+      () => import("../components/medium/search-autocomplete/Autocomplete"),
+    ),
+    concepts: [
+      "debounced API search (300ms)",
+      "keyboard nav (Arrow/Enter/Escape)",
+      "highlight matched text (regex split)",
+      "click-outside close (useRef)",
+    ],
+  },
+  {
+    name: "Search - Debounce + Cache",
+    path: "search",
+    difficulty: "medium",
+    component: lazy(() => import("../components/medium/search-debounce-cache/Search")),
+    concepts: ["useEffect", "debounce", "caching", "async/await", "cleanup"],
   },
   {
     name: "Stepper",
@@ -718,33 +750,6 @@ export const componentRegistry: ComponentEntry[] = [
       "ref callback for DOM array",
       "offsetWidth margin calc",
       "progress bar percentage",
-    ],
-  },
-  {
-    name: "Tabs Form",
-    path: "tabs-form",
-    difficulty: "medium",
-    component: lazy(() => import("../components/medium/tabs-form/TabsForm")),
-    concepts: [
-      "config-driven UI",
-      "centralised state",
-      "per-tab validation",
-      "ComponentType<Props>",
-      "shared types",
-    ],
-  },
-  {
-    name: "Task Board",
-    path: "task-board",
-    difficulty: "medium",
-    component: lazy(
-      () => import("../components/medium/task-board/TaskBoard"),
-    ),
-    concepts: [
-      "Task type with ColumnId status",
-      "indexOf + direction movement",
-      "inline edit (blur/Enter save)",
-      "filter-based column rendering",
     ],
   },
   {
@@ -792,7 +797,7 @@ export const componentRegistry: ComponentEntry[] = [
 
   // ─── HARD ────────────────────────────────────────────────────
   {
-    name: "Calendar Events",
+    name: "Calendar - Events",
     path: "calendar-events",
     difficulty: "hard",
     component: lazy(
@@ -805,6 +810,21 @@ export const componentRegistry: ComponentEntry[] = [
       "calendar grid rendering",
       "modal CRUD with validation",
       "delete with key cleanup",
+    ],
+  },
+  {
+    name: "Comments - Nested",
+    path: "nested-comments",
+    difficulty: "hard",
+    component: lazy(
+      () =>
+        import("../components/hard/comments-nested/NestedComments"),
+    ),
+    concepts: [
+      "recursive CommentData type",
+      "recursive tree insertion",
+      "module-level id counter",
+      "onReply callback prop",
     ],
   },
   {
@@ -822,7 +842,22 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "File & Folder Explorer",
+    name: "File - Explorer",
+    path: "file-explorer",
+    difficulty: "hard",
+    component: lazy(
+      () => import("../components/hard/file-explorer/FileExplorer"),
+    ),
+    concepts: [
+      "recursive types",
+      "tree mutation (add/delete)",
+      "Record<string, boolean>",
+      "string | number union ID",
+      "form events",
+    ],
+  },
+  {
+    name: "File - Folder Explorer",
     path: "file-folder-explorer",
     difficulty: "hard",
     component: lazy(
@@ -840,21 +875,6 @@ export const componentRegistry: ComponentEntry[] = [
     ],
   },
   {
-    name: "File Explorer",
-    path: "file-explorer",
-    difficulty: "hard",
-    component: lazy(
-      () => import("../components/hard/file-explorer/FileExplorer"),
-    ),
-    concepts: [
-      "recursive types",
-      "tree mutation (add/delete)",
-      "Record<string, boolean>",
-      "string | number union ID",
-      "form events",
-    ],
-  },
-  {
     name: "Nested Checkboxes",
     path: "nested-checkboxes",
     difficulty: "hard",
@@ -867,21 +887,6 @@ export const componentRegistry: ComponentEntry[] = [
       "Record<number, boolean>",
       "recursive components",
       "parent↔child propagation",
-    ],
-  },
-  {
-    name: "Nested Comments",
-    path: "nested-comments",
-    difficulty: "hard",
-    component: lazy(
-      () =>
-        import("../components/hard/nested-comments/NestedComments"),
-    ),
-    concepts: [
-      "recursive CommentData type",
-      "recursive tree insertion",
-      "module-level id counter",
-      "onReply callback prop",
     ],
   },
   {
