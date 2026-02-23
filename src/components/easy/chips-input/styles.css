@@ -1,0 +1,65 @@
+/* ChipsInput Component Styles - Minimal Design */
+
+.wrapper {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inputBox:focus {
+  border-color: #666;
+}
+
+.inputBox::placeholder {
+  color: #999;
+}
+
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chipWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  gap: 8px;
+}
+
+.chip {
+  color: #333;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  color: #000;
+}

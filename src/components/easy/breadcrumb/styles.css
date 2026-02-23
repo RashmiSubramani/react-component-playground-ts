@@ -1,0 +1,19 @@
+/* Breadcrumb Styles */
+
+.breadcrumb {
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: blue;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+}
+
+.breadcrumb .current {
+  color: gray;
+  font-weight: bold;
+}
