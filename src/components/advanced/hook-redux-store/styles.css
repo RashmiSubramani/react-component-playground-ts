@@ -1,0 +1,287 @@
+/* Hook: Redux Store Styles */
+
+.hrs-container {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hrs-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.hrs-section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+/* ─── Layout ─────────────────────────────────────── */
+
+.hrs-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .hrs-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Product catalog ────────────────────────────── */
+
+.hrs-catalog {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.hrs-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hrs-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.hrs-product-img {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.hrs-product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hrs-product-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hrs-product-price {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ─── Buttons (shared) ───────────────────────────── */
+
+.hrs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.hrs-add-btn {
+  background: #2e86c1;
+  color: #fff;
+}
+
+.hrs-add-btn:hover {
+  background: #2471a3;
+}
+
+.hrs-apply-btn {
+  background: #2e86c1;
+  color: #fff;
+}
+
+.hrs-apply-btn:hover {
+  background: #2471a3;
+}
+
+.hrs-clear-btn {
+  width: 100%;
+  justify-content: center;
+  background: #757575;
+  color: #fff;
+  padding: 8px;
+  margin-top: 12px;
+}
+
+.hrs-clear-btn:hover {
+  background: #616161;
+}
+
+/* ─── Cart ───────────────────────────────────────── */
+
+.hrs-cart {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.hrs-empty {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.hrs-cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.hrs-cart-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hrs-cart-item:last-child {
+  border-bottom: none;
+}
+
+.hrs-cart-img {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.hrs-cart-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hrs-cart-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hrs-cart-price {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ─── Qty controls ───────────────────────────────── */
+
+.hrs-qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hrs-qty-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.hrs-qty-btn:hover {
+  background: #f0f0f0;
+}
+
+.hrs-qty {
+  min-width: 18px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hrs-remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  padding: 4px;
+  transition: color 0.15s;
+}
+
+.hrs-remove-btn:hover {
+  color: #e74c3c;
+}
+
+/* ─── Discount row ───────────────────────────────── */
+
+.hrs-discount-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+
+.hrs-discount-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.hrs-discount-input:focus {
+  outline: none;
+  border-color: #2e86c1;
+}
+
+.hrs-code-error {
+  color: #e74c3c;
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+
+/* ─── Totals ─────────────────────────────────────── */
+
+.hrs-totals {
+  margin-top: 14px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.hrs-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 3px 0;
+}
+
+.hrs-discount-line {
+  color: #27ae60;
+}
+
+.hrs-grand-total {
+  font-weight: 700;
+  font-size: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+  margin-top: 4px;
+}
