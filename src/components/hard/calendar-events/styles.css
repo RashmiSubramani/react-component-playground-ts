@@ -1,0 +1,236 @@
+/* Calendar Events Styles */
+
+.ce-app {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Header */
+.ce-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ce-nav-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.ce-nav-btn:hover {
+  background: #0056b3;
+}
+
+.ce-add-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.ce-add-btn:hover {
+  background: #1e7e34;
+}
+
+/* Calendar Grid */
+.ce-grid {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.ce-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #f8f9fa;
+}
+
+.ce-weekday {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-right: 1px solid #ddd;
+}
+
+.ce-weekday:last-child {
+  border-right: none;
+}
+
+.ce-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.ce-day {
+  min-height: 100px;
+  padding: 5px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.ce-day:nth-child(7n) {
+  border-right: none;
+}
+
+.ce-day-empty {
+  background: #f8f9fa;
+}
+
+.ce-today {
+  background: #e3f2fd;
+}
+
+.ce-day-number {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Events inside day cells */
+.ce-events {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ce-event-item {
+  background: #007bff;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ce-delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.ce-delete-btn:hover {
+  color: #ff6b6b;
+}
+
+/* Modal */
+.ce-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ce-modal {
+  background: white;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 90vw;
+}
+
+.ce-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ce-modal-header h3 {
+  margin: 0;
+}
+
+.ce-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ce-modal-body {
+  padding: 15px;
+}
+
+.ce-form-group {
+  margin-bottom: 15px;
+}
+
+.ce-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.ce-form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.ce-modal-footer {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.ce-save-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ce-save-btn:hover {
+  background: #1e7e34;
+}
+
+.ce-cancel-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ce-cancel-btn:hover {
+  background: #545b62;
+}
+
+.ce-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+}

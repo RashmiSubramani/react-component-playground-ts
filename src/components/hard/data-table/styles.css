@@ -1,0 +1,63 @@
+/* Data Table Styles */
+
+.dt-container {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.dt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dt-table th,
+.dt-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.dt-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.dt-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.dt-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dt-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.dt-btn:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.dt-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dt-page-info {
+  margin: 0 10px;
+}
+
+.dt-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
