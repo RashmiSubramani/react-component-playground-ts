@@ -1,0 +1,25 @@
+/* Countdown Timer Styles */
+
+.countdownContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.timer {
+  background-color: darkslategray;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  min-width: 80px;
+  text-align: center;
+}
+
+.colon {
+  font-size: 30px;
+  font-weight: bold;
+}

@@ -1,0 +1,31 @@
+/* Comments Styles */
+
+.commentsContainer {
+  max-width: 1600px;
+  margin: 40px auto;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding: 16px;
+}
+
+.commentRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
+  border-left: 2px solid #ccc;
+}
+
+.commentAvatar {
+  width: 64px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.commentUsername {
+  font-weight: bold;
+}
+
+.commentText {
+  padding: 0 8px;
+}

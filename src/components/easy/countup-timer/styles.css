@@ -1,0 +1,37 @@
+/* Count-Up Timer Styles */
+
+.countupWrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.countupDisplay {
+  font-size: 3rem;
+  font-family: monospace;
+  margin: 20px 0;
+}
+
+.countupControls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.actionButton {
+  background-color: lightslategray;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.actionButton:hover:not(:disabled) {
+  background-color: slategray;
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
