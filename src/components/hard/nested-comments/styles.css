@@ -1,0 +1,91 @@
+/* Nested Comments Styles */
+
+.nc-container {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Top-level input */
+.nc-new-comment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nc-new-comment input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.nc-new-comment button {
+  padding: 10px 16px;
+  background-color: #4a8ef5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nc-new-comment button:hover {
+  background-color: #3678d8;
+}
+
+/* Each comment block */
+.nc-comment {
+  border-left: 2px solid #ccc;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.nc-text {
+  margin-bottom: 8px;
+}
+
+/* Reply toggle button */
+.nc-reply-toggle {
+  background: none;
+  border: none;
+  color: #4a8ef5;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.nc-reply-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Reply input box */
+.nc-reply-box {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.nc-reply-box input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.nc-reply-box button {
+  padding: 8px 14px;
+  background-color: #4a8ef5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nc-reply-box button:hover {
+  background-color: #3678d8;
+}
+
+/* Replies container */
+.nc-replies {
+  margin-left: 20px;
+}
