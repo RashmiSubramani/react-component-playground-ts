@@ -1,0 +1,58 @@
+/* Traffic Lights Styles */
+
+.tl-container {
+  max-width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Housing ────────────────────────────────────── */
+
+.tl-housing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  background: #333;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* ─── Light (base) ───────────────────────────────── */
+
+.tl-light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+/* ─── Active states ──────────────────────────────── */
+
+.tl-red-on {
+  color: #ff0000;
+  filter: drop-shadow(0 0 16px rgba(255, 0, 0, 0.8));
+}
+
+.tl-yellow-on {
+  color: #ffdd00;
+  filter: drop-shadow(0 0 16px rgba(255, 221, 0, 0.8));
+}
+
+.tl-green-on {
+  color: #00cc00;
+  filter: drop-shadow(0 0 16px rgba(0, 204, 0, 0.8));
+}
+
+/* ─── Status text ────────────────────────────────── */
+
+.tl-status {
+  font-size: 14px;
+  color: #555;
+}

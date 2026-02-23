@@ -1,0 +1,96 @@
+/* Sortable List Styles */
+
+.sl-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* ─── Input row ──────────────────────────────────── */
+
+.sl-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sl-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.sl-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* ─── Buttons ────────────────────────────────────── */
+
+.sl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sl-btn:hover {
+  background-color: #0056b3;
+}
+
+.sl-add-btn {
+  background-color: #28a745;
+}
+
+.sl-add-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* ─── Sort row ───────────────────────────────────── */
+
+.sl-sort-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* ─── List ───────────────────────────────────────── */
+
+.sl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.sl-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.sl-item:last-child {
+  border-bottom: none;
+}
+
+/* ─── Empty state ────────────────────────────────── */
+
+.sl-empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+}
