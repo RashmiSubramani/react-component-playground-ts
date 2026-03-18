@@ -1,0 +1,38 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  gap: 0;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.hovered {
+  background-color: #87cefa !important;
+  box-shadow: inset 0 0 0 3px #3b82f6;
+}
+
+.king-move {
+  background-color: #4682b4 !important;
+}

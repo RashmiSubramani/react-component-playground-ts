@@ -1,0 +1,42 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.hovered {
+  background-color: lightblue !important;
+}
+
+.pawn-move {
+  background-color: darkblue !important;
+}
+
+.pawn-icon {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", "Noto Sans Symbols",
+    sans-serif;
+  pointer-events: none;
+}

@@ -1,0 +1,69 @@
+.wordle-app {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.gridWordle {
+  display: grid;
+  gap: 5px;
+}
+
+.rowWordle {
+  display: flex;
+  justify-content: center;
+  margin: 3px 0;
+}
+
+.cellWordle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ccc;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cellWordle.green {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.cellWordle.yellow {
+  background-color: #c9b458;
+  color: white;
+}
+
+.cellWordle.grey {
+  background-color: #787c7e;
+  color: white;
+}
+
+.keyboard {
+  margin-top: 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.key {
+  padding: 10px;
+  margin: 2px;
+  border: none;
+  background-color: #d3d6da;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.key.wide {
+  width: 60px;
+}

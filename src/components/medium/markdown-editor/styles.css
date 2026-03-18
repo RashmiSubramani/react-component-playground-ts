@@ -1,0 +1,142 @@
+App {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.toggle-btn {
+  padding: 10px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #4b5563;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #374151;
+}
+
+.editor-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.editor-section,
+.preview-section {
+  flex: 0 0 50%;
+  min-width: 150px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+} */
+
+.markdown-input {
+  width: 100%;
+  height: 400px;
+  resize: none;
+  border: none;
+  outline: grey;
+  font-size: 15px;
+  font-family: monospace;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.markdown-preview {
+  height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 10px;
+}
+
+.btn-group button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.dark h1,
+.dark h2 {
+  color: #f8fafc;
+}
+
+.dark .editor-section,
+.dark .preview-section {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.dark .markdown-input,
+.dark .markdown-preview {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+.dark .toggle-btn {
+  background-color: #64748b;
+}
+
+.dark .toggle-btn:hover {
+  background-color: #475569;
+}

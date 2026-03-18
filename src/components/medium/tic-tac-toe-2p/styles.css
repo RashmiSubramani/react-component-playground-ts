@@ -1,0 +1,30 @@
+.game {
+  text-align: center;
+  margin-top: 150px;
+  font-family: sans-serif;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 1px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid #999;
+  border-radius: 8px;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}

@@ -1,0 +1,114 @@
+/* body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f4f4f4, #dfe6e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.calculator-container {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  color: #22b691;
+}
+
+.display {
+  width: 90%;
+  height: 40px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  text-align: right;
+  margin-bottom: 25px;
+  background-color: #e6efe7;
+  color: #2f3542;
+}
+
+.display::placeholder {
+  color: #b2bec3;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.calc-btn {
+  padding: 15px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d2f6ec;
+  color: #2d3436;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-btn:hover {
+  background-color: #a6dfc1;
+  transform: scale(1.05);
+}
+
+/*special buttons*/
+.clear-btn {
+  background-color: #2d3436;
+}
+
+.clear-btn:hover {
+  background-color: #000000;
+}
+
+.back-btn {
+  background-color: #fd5a5a;
+}
+
+.back-btn:hover {
+  background-color: #ff2b2b;
+}
+
+.equal-btn {
+  grid-column: span 3;
+  background-color: #00b894;
+}
+
+.equal-btn:hover {
+  background-color: #019875;
+}
+
+/* Icon Styling for Lucide icons */
+.cal-btn svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  stroke: #2d3436;
+}
+
+/* Icon colors for special buttons */
+.clear-btn svg {
+  stroke: #ffffff;
+}
+
+.back-btn svg {
+  stroke: #ffffff;
+}
+
+.equal-btn svg {
+  stroke: #ffffff;
+}

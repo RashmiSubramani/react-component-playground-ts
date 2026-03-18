@@ -1,0 +1,79 @@
+/* BillingSystem.css */
+.billing-container {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input-section input {
+  padding: 8px;
+  width: 180px;
+  font-size: 16px;
+}
+
+.input-section button {
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.assigned-msg {
+  margin-bottom: 12px;
+  color: green;
+  font-weight: bold;
+}
+
+.counter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.counter h4 {
+  margin-bottom: 8px;
+}
+
+.queue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customer-box {
+  background-color: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #999;
+}

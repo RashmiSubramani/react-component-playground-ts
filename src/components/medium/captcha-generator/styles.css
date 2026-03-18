@@ -1,0 +1,51 @@
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+.captcha-box {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  background: #e0e0e0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.captchaInput {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.actionButton {
+  padding: 8px 12px;
+  margin: 4px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.actionButton:hover {
+  background: #0056b3;
+}
+
+p {
+  margin-top: 10px;
+  font-weight: bold;
+}

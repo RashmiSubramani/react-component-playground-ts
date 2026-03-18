@@ -1,0 +1,33 @@
+.minesweeper-app {
+  text-align: center;
+  font-family: Arial;
+}
+
+.gridMinesweeper {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  gap: 4px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.cellMinesweeper {
+  width: 40px;
+  height: 40px;
+  background: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cellMinesweeper.revealed {
+  background: #ddd;
+  cursor: default;
+}
+
+.statusMinesweeper {
+  margin: 10px;
+  font-size: 18px;
+}

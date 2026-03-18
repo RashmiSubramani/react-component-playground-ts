@@ -1,0 +1,59 @@
+.chessboard-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  gap: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.light-square {
+  background-color: #f0d9b5;
+  color: #2d3748;
+}
+
+.light-square:hover {
+  background-color: #e0c9a5;
+}
+
+.dark-square {
+  background-color: #b58863;
+  color: #f7fafc;
+}
+
+.dark-square:hover {
+  background-color: #a57853;
+}
+
+.selected-square {
+  background-color: #87cefa !important;
+  color: #333 !important;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 3px #3b82f6;
+}
+
+.knight-move-target {
+  background-color: #4682b4 !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+.knight-move-target:hover {
+  background-color: #366f9b !important;
+}

@@ -1,0 +1,50 @@
+.connect-four-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.board-connect-four {
+  display: inline-block;
+  margin-top: 20px;
+  border: 4px solid #333;
+  background-color: #0a74da;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.row-connect-four {
+  display: flex;
+}
+
+.cell-connect-four {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disc {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.disc.red {
+  background-color: red;
+}
+
+.disc.yellow {
+  background-color: yellow;
+}
+
+.reset-btn-connect-four {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

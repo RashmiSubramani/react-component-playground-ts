@@ -1,0 +1,119 @@
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9eff5);
+  color: #2a2a2a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.app-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease-in-out;
+}
+/* 
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+} */
+
+.input-textarea {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background-color: #ffffff;
+  resize: vertical;
+  font-family: inherit;
+  min-height: 130px;
+  transition: all 0.3s ease;
+}
+
+.input-textarea:focus {
+  outline: none;
+  border-color: #7a5af8;
+  box-shadow: 0 0 8px rgba(122, 90, 248, 0.4);
+  background-color: #fefefe;
+}
+
+.output-box {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1.3rem;
+  white-space: pre-wrap;
+  min-height: 100px;
+  color: #222;
+  user-select: text;
+  transition: background 0.3s ease;
+}
+
+/* h2 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+} */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.clear-btn {
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 12px rgba(255, 105, 135, 0.3);
+}
+
+.clear-btn:hover {
+  background-color: #444;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 105, 135, 0.35);
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #777;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

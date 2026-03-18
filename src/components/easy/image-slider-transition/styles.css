@@ -1,0 +1,25 @@
+@keyframes slide-next {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-prev {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-next {
+  animation: slide-next 0.7s ease forwards;
+}
+
+.animate-slide-prev {
+  animation: slide-prev 0.7s ease forwards;
+}

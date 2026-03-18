@@ -1,0 +1,44 @@
+.game2048 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.grid2048 {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  gap: 10px;
+  margin: 20px auto;
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
+}
+
+.cell2048 {
+  width: 90px;
+  height: 90px;
+  background: #cdc1b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.tile-2 { background: #eee4da; }
+.tile-4 { background: #ede0c8; }
+.tile-8 { background: #f2b179; color: white; }
+.tile-16 { background: #f59563; color: white; }
+.tile-32 { background: #f67c5f; color: white; }
+.tile-64 { background: #f65e3b; color: white; }
+.tile-128 { background: #edcf72; }
+.tile-256 { background: #edcc61; }
+.tile-512 { background: #edc850; }
+.tile-1024 { background: #edc53f; }
+.tile-2048 { background: #edc22e; }
+
+.hint {
+  margin-top: 10px;
+  color: #776e65;
+}

@@ -1,0 +1,127 @@
+.tracker-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.balance {
+  margin: 0;
+}
+
+.toggle-form-button {
+  padding: 6px 12px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-form-button:hover {
+  background: #388e3c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form input,
+.form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form button {
+  padding: 8px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #1976d2;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px;
+  font-weight: bold;
+}
+
+.search {
+  width: 96%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.transactions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-left: 4px solid #999;
+  border-radius: 6px;
+}
+
+.transactions li.income {
+  border-color: #4caf50;
+}
+
+.transactions li.expense {
+  border-color: #f44336;
+}
+
+.transactions button {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transactions button:hover {
+  background: #c62828;
+}
+
+.no-transactions {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}

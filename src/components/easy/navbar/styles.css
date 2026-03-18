@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  background-color: #1e1e2f;
+  padding: 15px 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-item.active {
+  border-bottom: 2px solid #00bcd4;
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Light background color */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the heading */
+.page-container h2 {
+  color: #333;
+  font-size: 25px;
+  font-weight: bold;
+}

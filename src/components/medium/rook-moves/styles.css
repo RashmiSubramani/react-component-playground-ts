@@ -1,0 +1,42 @@
+/* styles.css */
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 40px);
+  grid-template-rows: repeat(8, 40px);
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.light {
+  background-color: #f0d9b5; /* light square */
+}
+
+.dark {
+  background-color: #b58863; /* dark square */
+}
+
+.hovered {
+  background-color: #87cefa; /* light blue */
+}
+
+.rook-move {
+  background-color: #4682b4; /* dark blue */
+}
+
+.rook-icon {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  pointer-events: none;
+}
